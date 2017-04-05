@@ -681,8 +681,7 @@ header .callback img {
 .photo-tab-block .item {
   float: left;
   width: 100vw;
-  height: 1024px;
-  margin-right: -4px;
+  min-height: 1024px;
   background-position: center;
 }
 .btn {
