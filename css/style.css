@@ -911,13 +911,15 @@ header .callback img {
 .clients-block {
   background-color: #E0E0E0;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .clients-block .case-item {
   height: 300px;
   background-color: #fff;
   position: relative;
-  margin-right: -3px;
-  border: 0.5px solid #E0E0E0;
+  border: 1px solid #E0E0E0;
   width: 25%;
   display: inline-block;
   vertical-align: top;
