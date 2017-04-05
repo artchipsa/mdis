@@ -40,9 +40,10 @@
 	overflow: hidden;
 	min-height: 100vh;
 }
+
 .transition-block{
-	animation-fill-mode: both;
-	animation-duration: 1s;
+	animation-fill-mode: forward;
+	animation-duration: 1.2s;
 	animation-timing-function: ease;
 	&.ng-leave{
 		.main-container{
@@ -54,51 +55,43 @@
 	}
 	&.ng-enter{
 		.main-container{
-			animation-fill-mode: forward;
-			animation-duration: 1.2s;
-			animation-timing-function: ease;
-			animation-name: rightenter;
+		animation-fill-mode: forward;
+		animation-duration: 1.2s;
+		animation-timing-function: ease;
+		animation-name: rightenter;
 		}
 	}
-	 &.slide-right.ng-leave{
-		.content-container{
-			animation-fill-mode: forward;
-			animation-duration: 1.2s;
-			animation-timing-function: ease;
-			animation-name: rightleave;
-		}
+	&.slide-right.ng-leave-prepare .content-container, 
+	&.slide-right.ng-leave .content-container{
+		animation-fill-mode: forward;
+		animation-duration: 1.2s;
+		animation-timing-function: ease;
+		animation-name: rightleave;
 	}
-	&.slide-right.ng-enter{
-		.content-container{
-			animation-fill-mode: forward;
-			animation-duration: 1.2s;
-			animation-timing-function: ease;
-			animation-name: rightenter;
-		}
+	&.slide-right.ng-enter-prepare .content-container,
+	&.slide-right.ng-enter .content-container{
+		animation-fill-mode: forward;
+		animation-duration: 1.2s;
+		animation-timing-function: ease;
+		animation-name: rightenter;
 	}
-	&.slide-right.ng-enter-prepare{
-		transform: translate3d(0%, 0, 0);
+	&.slide-left.ng-leave-prepare .content-container,
+	&.slide-left.ng-leave .content-container{
+		animation-fill-mode: forward;
+		animation-duration: 1.2s;
+		animation-timing-function: ease;
+		animation-name: leftleave;
 	}
-	&.slide-left.ng-leave{
-		.content-container{
-			animation-fill-mode: forward;
-			animation-duration: 1.2s;
-			animation-timing-function: ease;
-			animation-name: leftleave;
-		}
-	}
-	&.slide-left.ng-enter-prepare{
-		transform: translate3d(100%, 0, 0);
-	}
-	&.slide-left.ng-enter{
-		.content-container{
-			animation-fill-mode: forward;
-			animation-duration: 1.2s;
-			animation-timing-function: ease;
-			animation-name: leftenter;
-		}
+
+	&.slide-left.ng-enter-prepare .content-container,
+	&.slide-left.ng-enter .content-container{
+		animation-fill-mode: forward;
+		animation-duration: 1.2s;
+		animation-timing-function: ease;
+		animation-name: leftenter;
 	} 
 }
+
 
 @keyframes leftenter{
 	0%{
@@ -1766,7 +1759,6 @@ footer{
 		left: -100px;
 	}
 }
-
 @media (max-width: 1025px){
 	.fail-page .text span{
 		font-size: 22vw;
@@ -1903,7 +1895,6 @@ footer{
 		width: 50%;
 	}
 }
-
 @media (max-width: 769px){
 
  	header .half-header{

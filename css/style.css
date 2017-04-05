@@ -82,8 +82,8 @@
   min-height: 100vh;
 }
 .transition-block {
-  animation-fill-mode: both;
-  animation-duration: 1s;
+  animation-fill-mode: forward;
+  animation-duration: 1.2s;
   animation-timing-function: ease;
 }
 .transition-block.ng-leave .main-container {
@@ -98,30 +98,28 @@
   animation-timing-function: ease;
   animation-name: rightenter;
 }
+.transition-block.slide-right.ng-leave-prepare .content-container,
 .transition-block.slide-right.ng-leave .content-container {
   animation-fill-mode: forward;
   animation-duration: 1.2s;
   animation-timing-function: ease;
   animation-name: rightleave;
 }
+.transition-block.slide-right.ng-enter-prepare .content-container,
 .transition-block.slide-right.ng-enter .content-container {
   animation-fill-mode: forward;
   animation-duration: 1.2s;
   animation-timing-function: ease;
   animation-name: rightenter;
 }
-.transition-block.slide-right.ng-enter-prepare {
-  transform: translate3d(0%, 0, 0);
-}
+.transition-block.slide-left.ng-leave-prepare .content-container,
 .transition-block.slide-left.ng-leave .content-container {
   animation-fill-mode: forward;
   animation-duration: 1.2s;
   animation-timing-function: ease;
   animation-name: leftleave;
 }
-.transition-block.slide-left.ng-enter-prepare {
-  transform: translate3d(100%, 0, 0);
-}
+.transition-block.slide-left.ng-enter-prepare .content-container,
 .transition-block.slide-left.ng-enter .content-container {
   animation-fill-mode: forward;
   animation-duration: 1.2s;
