@@ -715,11 +715,14 @@ header .callback img {
   background-color: #E2112E;
   color: #fff;
 }
+.news-block {
+  display: flex;
+}
 .news-block .half {
   display: inline-block;
   vertical-align: top;
   width: 50%;
-  margin-right: -4px;
+  margin-right: 0px;
 }
 .news-block .half .tag {
   top: 35px;
