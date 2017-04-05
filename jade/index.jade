@@ -1,0 +1,187 @@
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		title Mdis
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/owl.carousel.min.css")
+		link(rel="stylesheet", href="css/owl.theme.default.min.css")
+		link(rel="stylesheet", href="css/jquery.mCustomScrollbar.min.css")
+		link(rel="stylesheet", href="css/jquery.fancybox.min.css")
+		//- base(href="/")
+	body(ng-app="route")
+		.svg-assets
+			include ../img/assets.svg
+		header(ng-class="headerClass")
+			.half-header
+				a.menu(href="#", target="_self", data-modal="menu") #[span ] #[p меню]
+				a.search(href="#" target="_self", data-modal="search") #[img(src="img/Icon/SEARCH.svg", alt="")] #[p поиск]
+			.half-header
+				a.question(href="#" target="_self" data-modal="ask") 
+					span задать вопрос
+					img(src="img/ask.svg", alt="")
+				a.callback(href="#" target="_self" data-modal="call") 
+					span перезвоните мне
+					img(src="img/phone.svg", alt="")
+				a.phone(href="tel:+7 924 242 45 64") +7 924 #[span 242 45 64]
+		.overflow
+			.modal#menu
+				.menu-container
+					.menu-row
+						.count 01
+						.line
+						.row-content
+							.section.no-sub
+								a(href="/" ng-click="back()") ГЛАВНАЯ
+					.menu-row
+						.count 02
+						.line
+						.row-content
+							.section
+								a(href="#!solutions/index" ng-click="next()") РЕШЕНИЯ
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Электроэнергетика
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Финансовые организации
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Промышленные предприятия
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Госструктуры
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Атомная энергетика
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Авиация и транспорт
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Автосалоны
+									a(href="#!solutions/solution" ng-click="next()").mobile-scroll-elem Коммерческие предприятия
+					.menu-row
+						.count 03
+						.line
+						.row-content
+							.section
+								a(href="#!products/index" ng-click="next()") ПРОДУКТЫ
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись телефонных переговоров
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Селективная запись переговоров
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Skype for business
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись LYNC
+									a(href="#!products/product" ng-click="next()").mobile-scroll-elem Запись диспетчерских переговоров
+					.menu-row
+						.count 04
+						.line
+						.row-content
+							.section
+								a(href="#!services/index" ng-click="next()") УСЛУГИ
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Персональные решения
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Комплексная модернизация
+									a(href="#!services/service" ng-click="next()").mobile-scroll-elem Обучение
+					.menu-row
+						.count 05
+						.line
+						.row-content
+							.section
+								a(href="#!news/index" ng-click="next()") НОВОСТИ И СТАТЬИ
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!news/index" ng-click="next()").mobile-scroll-elem Новости
+									a(href="#!news/index" ng-click="next()").mobile-scroll-elem Статьи
+					.menu-row
+						.count 06
+						.line
+						.row-content
+							.section
+								a(href="#!support/index" ng-click="next()") ПОДДЕРЖКА
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!support/index" ng-click="next()").mobile-scroll-elem По продуктам
+									a(href="#!support/index" ng-click="next()").mobile-scroll-elem Статьи
+					.menu-row
+						.count 07
+						.line
+						.row-content
+							.section
+								a(href="#!about/index" ng-click="next()") О КОМПАНИИ
+							.subsections.mobile-scroll
+								.mobile-scroll-container
+									a(href="#!about/clients" ng-click="next()").mobile-scroll-elem Наши клиенты
+									a(href="#!about/license" ng-click="next()").mobile-scroll-elem Сертификаты и лицензии
+									a(href="#!about/partners" ng-click="next()").mobile-scroll-elem Партнеры
+									a(href="#!about/rewards" ng-click="next()").mobile-scroll-elem Награды
+									a(href="#!about/history" ng-click="next()").mobile-scroll-elem История
+					.menu-row
+						.count 08
+						.line
+						.row-content
+							.section.no-sub
+								a(href="#!contacts" ng-click="next()") Контакты
+			.modal#call
+				.menu-container
+					form
+						.form-row
+							label Ваше имя
+							input.input(type="text", name="")
+						.form-row
+							label контактный телефон
+							input.input(type="tel", name="")
+						.form-row
+							input.btn.primary(type="submit", value="Отправить")
+						.success
+							p Спасибо, мы свяжемся с вами!
+			.modal#ask
+				.menu-container
+					form
+						.form-row
+							label Ваше имя
+							input.input(type="text", name="")
+						.form-row
+							label Ваша почта
+							input.input(type="email", name="")
+						.form-row
+							label Ваш вопрос
+							textarea.input(name="")
+						.form-row
+							input.btn.primary(type="submit", value="Отправить")
+						.success
+							p Спасибо, мы свяжемся с вами!
+			.modal#search
+				.menu-container
+					form
+						h2 Поиск
+						.form-row
+							input.input(type="text", name="")
+						.form-row
+							input.btn.primary(type="submit", value="Найти")
+			#content-changer.transition-block(ng-view, ng-class="slide")
+		footer
+			.item
+				img(src="img/logo_footer.svg", alt="")
+				span.bottom ©   MD Information system 2006–2016
+			.item
+				span.top Адрес
+				.line
+				span.bottom 123022, Россия, г. Москва, ул. 1905 года, д. 7, строение 1
+			.item
+				span.top Контакты
+				.line
+				.bottom
+					a.tel(href="") +7 (495) 783-33-79 (многоканальный)
+					a(href="").email sales@mdis.ru (отдел продаж),
+					a(href="").email support@mdis.ru (тех. поддержка)
+			.item
+				a(href="").btn.primary ПОДРОБНЕЕ
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		script(src="js/owl.carousel.min.js")
+		script(src="js/hammer.js")
+		script(src="js/jquery.hammer.js")
+		script(src="js/angular.min.js")
+		script(src="js/angular-route.min.js")
+		script(src="js/angular-animate.min.js")
+		script(src="js/jquery.mCustomScrollbar.min.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAE8iqwKY6PeKvryHYgM_k7cbH9ZyKk5g")
+		script(src="js/jquery.fancybox.min.js")
+		script(src="js/wavesurfe.js")
+		script(src="js/isotope.js")
+		script(src="js/SocialShare.min.js")
+		script(src="https://use.fontawesome.com/856283dff2.js")
+		script(src="js/jquery.mask.min.js")
+		script(src="js/bodymovin.min.js")
+		script(src="js/app.js")
