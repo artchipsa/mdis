@@ -186,7 +186,7 @@ header{
 			img{
 				display: block;
 				width: 32px;
-				max-height: 32px;
+				height: 32px;
 			}
 		}
 		.callback{
@@ -198,7 +198,7 @@ header{
 			img{
 				display: block;
 				width: 32px;
-				max-height: 32px;
+				height: 32px;
 			}
 		}
 	}
@@ -479,10 +479,11 @@ header{
 		left: auto;
 		right: 4px;
 		top: 171px;
+		max-width: calc(~'100% - 50px');
 		position: absolute;
 		transition: color .45s ease, width .22s ease-in-out;
 		&.back{
-			width: calc(~'100% - 50px');
+			width: 100%;
 		}
 		&.forward{
 			left: 50px;
@@ -2070,6 +2071,12 @@ footer{
 	}
 	.question-block .question-item a span{
 		width: 91%;
+	}
+	.line-item .line-invisible{
+	    max-width: calc(~'100% - 33px');
+	}
+	.line-item .line-invisible.forward{
+		left: 30px;
 	}
 }
 @media (max-width: 439px){

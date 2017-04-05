@@ -1,51 +1,54 @@
 .svgico.solution-icon {
   width: 72px;
+  height: 72px;
   fill: #E2112E;
 }
 .svgico.arrow-icon {
   width: 32px;
+  height: 32px;
   fill: #fff;
   transition: all 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .svgico.arrow-small-icon {
   width: 12px;
+  height: 12px;
   fill: #E2112E;
   transition: all 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonExtraLight.otf');
-  src: url('../fonts/PantonExtraLight.woff2') format('woff2'), url('../fonts/PantonExtraLight.ttf') format('truetype');
+  src: url('../fonts/PantonExtraLight.ttf');
+  src: url('../fonts/PantonExtraLight.woff2') format('woff2'), url('../fonts/PantonExtraLight.woff') format('woff'), url('../fonts/PantonExtraLight.otf') format('opentype'), url('../fonts/PantonExtraLight.eot') format('embedded-opentype');
   font-weight: 200;
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonLight.otf');
-  src: url('../fonts/PantonLight.woff2') format('woff2'), url('../fonts/PantonLight.ttf') format('truetype');
+  src: url('../fonts/PantonLight.ttf');
+  src: url('../fonts/PantonLight.woff2') format('woff2'), url('../fonts/PantonLight.woff') format('woff'), url('../fonts/PantonLight.otf') format('opentype'), url('../fonts/PantonLight.eot') format('embedded-opentype');
   font-weight: 300;
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonRegular.otf');
-  src: url('../fonts/PantonRegular.woff2') format('woff2'), url('../fonts/PantonRegular.ttf') format('truetype');
+  src: url('../fonts/PantonRegular.ttf');
+  src: url('../fonts/PantonRegular.woff2') format('woff2'), url('../fonts/PantonRegular.woff') format('woff'), url('../fonts/PantonRegular.otf') format('opentype'), url('../fonts/PantonRegular.eot') format('embedded-opentype');
   font-weight: 400;
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonSemiBold.otf');
-  src: url('../fonts/PantonSemiBold.woff2') format('woff2'), url('../fonts/PantonSemiBold.ttf') format('truetype');
+  src: url('../fonts/PantonSemiBold.ttf');
+  src: url('../fonts/PantonSemiBold.woff2') format('woff2'), url('../fonts/PantonSemiBold.woff') format('woff'), url('../fonts/PantonSemiBold.otf') format('opentype'), url('../fonts/PantonSemiBold.eot') format('embedded-opentype');
   font-weight: 700;
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonBold.otf');
-  src: url('../fonts/PantonBold.woff2') format('woff2'), url('../fonts/PantonBold.ttf') format('truetype');
+  src: url('../fonts/PantonBold.ttf');
+  src: url('../fonts/PantonBold.woff2') format('woff2'), url('../fonts/PantonBold.woff') format('woff'), url('../fonts/PantonBold.otf') format('opentype'), url('../fonts/PantonBold.eot') format('embedded-opentype');
   font-weight: 800;
 }
 @font-face {
   font-family: Panton;
-  src: url('../fonts/PantonExtraBold.otf');
-  src: url('../fonts/PantonExtraBold.woff2') format('woff2'), url('../fonts/PantonExtraBold.ttf') format('truetype');
+  src: url('../fonts/PantonExtraBold.ttf');
+  src: url('../fonts/PantonExtraBold.woff2') format('woff2'), url('../fonts/PantonExtraBold.woff') format('woff'), url('../fonts/PantonExtraBold.otf') format('opentype'), url('../fonts/PantonExtraBold.eot') format('embedded-opentype');
   font-weight: 900;
 }
 * {
@@ -209,7 +212,7 @@ header.no-index .question span {
 header.no-index .question img {
   display: block;
   width: 32px;
-  max-height: 32px;
+  height: 32px;
 }
 header.no-index .callback {
   display: inline-block;
@@ -221,7 +224,7 @@ header.no-index .callback span {
 header.no-index .callback img {
   display: block;
   width: 32px;
-  max-height: 32px;
+  height: 32px;
 }
 header a {
   font-size: 18px;
@@ -476,11 +479,12 @@ header .callback img {
   left: auto;
   right: 4px;
   top: 171px;
+  max-width: calc(100% - 50px);
   position: absolute;
   transition: color 0.45s ease, width 0.22s ease-in-out;
 }
 .line-item .line-invisible.back {
-  width: calc(100% - 50px);
+  width: 100%;
 }
 .line-item .line-invisible.forward {
   left: 50px;
@@ -3074,6 +3078,12 @@ footer .item .top {
   }
   .question-block .question-item a span {
     width: 91%;
+  }
+  .line-item .line-invisible {
+    max-width: calc(100% - 33px);
+  }
+  .line-item .line-invisible.forward {
+    left: 30px;
   }
 }
 @media (max-width: 439px) {

@@ -130,7 +130,7 @@ $(document).ready(function(){
             anim.play();
 
 			if ($('.photo-tab-block').length){
-				var left = window.outerWidth * id;
+				var left = window.innerWidth * id;
 				$('.photo-tab-block').css({transform: 'translate3d(-'+left+'px, 0, 0)'});
 			}
 
