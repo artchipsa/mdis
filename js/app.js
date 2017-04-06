@@ -427,7 +427,7 @@ function anchorsBlock(){
 		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 		}
 	    // IF ставим к менюшке фиксированную позицию.
-	    alert(fromTop, fixed_trigger);
+	    alert(fixed_trigger);
 	    if(fromTop >= fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
