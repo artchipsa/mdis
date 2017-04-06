@@ -2818,7 +2818,7 @@ footer .item .top {
     font-size: 18px;
   }
   .wave-tabs-head {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
   .content-tab .title {
     font-size: 38px;
@@ -2937,7 +2937,7 @@ footer .item .top {
     width: 130px;
   }
   .wave-tabs-head {
-    margin-bottom: 130px;
+    margin-bottom: 90px;
   }
   .clients-block .case-item.content {
     width: 100%;
@@ -3080,6 +3080,9 @@ footer .item .top {
   }
   .line-item .line-invisible.forward {
     left: 30px;
+  }
+  .text-container h2 {
+    margin-top: 90px;
   }
 }
 @media (max-width: 439px) {
