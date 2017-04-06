@@ -257,6 +257,7 @@
 }
 .wave-tabs.anchors {
   background-color: #fff;
+  transform: translate3d(0, 0, 0);
 }
 .wave-tabs.anchors.fixed {
   position: fixed;
