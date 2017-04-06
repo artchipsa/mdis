@@ -403,12 +403,16 @@ function anchorsBlock(){
 		fixed_trigger = anchorMenu.offset().top + anchorMenuHeight;
 	}, 100)
 
+	setTimeout(function(){
+		waveFixed.height(anchorMenu.find('.wave-tabs-head').height());
+		waveFixed.css('marginBottom', anchorMenu.find('.wave-tabs-head').css('marginBottom'));
+	}, 550)
+
 	anchorMenu.find('.wave-tabs-head').width(anchorMenu.parent().width());
-	waveFixed.height(anchorMenu.find('.wave-tabs-head').outerHeight());
-	waveFixed.css('marginBottom', anchorMenu.find('.wave-tabs-head').css('marginBottom'));
 	$(window).resize(function(){
 		anchorMenu.width(anchorMenu.parent().width());
-		waveFixed.height(anchorMenu.find('.wave-tabs-head').outerHeight(true));
+		waveFixed.height(anchorMenu.height());
+		waveFixed.css('marginBottom', anchorMenu.find('.wave-tabs-head').css('marginBottom'));
 		fixed_stop_trigger = $('.spy-content').offset().top + $('.spy-content').height();
 	});
 
