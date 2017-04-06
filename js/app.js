@@ -399,6 +399,10 @@ function anchorsBlock(){
    	var lastScrollTop = 0;
 	var new_step = 0;
 
+	setTimeout(function(){
+		fixed_trigger = anchorMenu.offset().top + anchorMenuHeight;
+	}, 100)
+
 	anchorMenu.find('.wave-tabs-head').width(anchorMenu.parent().width());
 	waveFixed.height(anchorMenu.find('.wave-tabs-head').outerHeight());
 	waveFixed.css('marginBottom', anchorMenu.find('.wave-tabs-head').css('marginBottom'));
@@ -427,7 +431,6 @@ function anchorsBlock(){
 		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 		}
 	    // IF ставим к менюшке фиксированную позицию.
-	    alert(fixed_trigger);
 	    if(fromTop >= fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
