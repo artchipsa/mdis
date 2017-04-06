@@ -424,9 +424,10 @@ function anchorsBlock(){
 		if (window_width > 800){
 		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 		} else {
-		    var fromTop = $(this).scrollTop() + anchorMenuHeight+85;
+		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 		}
 	    // IF ставим к менюшке фиксированную позицию.
+	    alert(fromTop, fixed_trigger);
 	    if(fromTop >= fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
