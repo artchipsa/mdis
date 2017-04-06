@@ -3492,4 +3492,7 @@ footer .item .top {
   .contacts-table tr {
     display: block;
   }
+  .contacts-table {
+    display: block;
+  }
 }
