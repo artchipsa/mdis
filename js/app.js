@@ -75,7 +75,10 @@ $(document).ready(function(){
 			});
 		}
 
-		$('#search .input').focus();
+		if (modal == 'search'){
+			$('#search .input').focus();
+		}
+
 		$('header .menu').toggleClass('active');
 
 		if ($('header .menu').hasClass('active')){
@@ -421,6 +424,7 @@ function anchorsBlock(){
 	    var window_width = $(this).width();
 	    // IF ставим к менюшке фиксированную позицию.
 	    if(fromTop >= fixed_trigger){
+	    	alert('Opa');
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
 
@@ -973,10 +977,10 @@ function ready(){
 	if ($('.wave-tabs.anchors').length){
 		anchorsBlock();
 	}
-
 	// Клик на ссылку которая вызывает новые страницы роутером 
 	$('a[ng-click]').click(function(e){
-		$(window).scrollTop(0);
+		var body = $("html, body");
+		body.animate({scrollTop: 0}, '350', 'swing');
 	});
 
 	if ($('.full').length){
@@ -1060,10 +1064,8 @@ router.config(function($routeProvider, $locationProvider) {
     // $locationProvider.html5Mode(true);
 
 }).run(function($rootScope, $window, $route, $location) {
-
-
 	$rootScope.headerClass = '';
-    $rootScope.slide = '';  
+    $rootScope.slide = '';
 
     $rootScope.$on('$routeChangeStart', function() {  
         //event button to move backward  
@@ -1072,11 +1074,10 @@ router.config(function($routeProvider, $locationProvider) {
             // $window.history.back();
         }  
         //event button item list to move forward  
-        $rootScope.next = function() {  
+        $rootScope.next = function() { 
             $rootScope.slide = 'slide-left'; 
         }  
     });
-
     $rootScope.$on('$locationChangeStart', function(event, next, current) {
         $rootScope.actualLocation = $location.path();
         if($location.path() !== '/'){

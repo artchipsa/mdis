@@ -40,6 +40,7 @@
 	overflow: hidden;
 	min-height: 100vh;
 	width: 100%;
+	position: relative;
 }
 // .content-container{
 // 	background-color: #fff;
@@ -49,8 +50,8 @@
 	&.ng-animate{
 		width: 100%;
 		position: absolute;
-		transition: transform 1s ease;
-		-webkit-transition: transform 1s ease;
+		transition: transform 0.9s ease;
+		-webkit-transition: transform 0.9s ease;
 	}
 	&.ng-enter-prepare{
 		opacity: 0;
@@ -90,97 +91,6 @@
 		}
 	}
 }
-
-
-/* .transition-block{
-	animation-fill-mode: forwards;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	&.ng-leave{
-		.main-container{
-			animation-fill-mode: forwards;
-			animation-duration: 1s;
-			animation-timing-function: ease;
-			animation-name: leftleave;
-		}
-	}
-	&.ng-enter{
-		.main-container{
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		animation-timing-function: ease;
-		animation-name: rightenter;
-		}
-	}
-	&.slide-right.ng-leave-prepare .content-container, 
-	&.slide-right.ng-leave .content-container{
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		animation-timing-function: ease;
-		animation-name: rightleave;
-	}
-	&.slide-right.ng-enter-prepare .content-container,
-	&.slide-right.ng-enter .content-container{
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		animation-timing-function: ease;
-		animation-name: rightenter;
-	}
-	&.slide-left.ng-leave-prepare .content-container,
-	&.slide-left.ng-leave .content-container{
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		animation-timing-function: ease;
-		animation-name: leftleave;
-	}
-
-	&.slide-left.ng-enter-prepare .content-container,
-	&.slide-left.ng-enter .content-container{
-		animation-fill-mode: forwards;
-		animation-duration: 1s;
-		animation-timing-function: ease;
-		animation-name: leftenter;
-	} 
-} */
-
-
-@keyframes leftenter{
-	0%{
-		transform: translate3d(100%, 0, 0);
-	}
-	100%{
-		transform: translate3d(0%, 0, 0);
-	}
-}
-
-@keyframes leftleave{
-	0%{
-		transform: translate3d(0%, 0, 0);
-	}
-	100%{
-		transform: translate3d(-100%, 0, 0);
-	}
-}
-
-@keyframes rightenter{
-	0%{
-		transform: translate3d(-100%, 0, 0);
-	}
-	100%{
-		transform: translate3d(0%, 0, 0);
-	}
-}
-
-@keyframes rightleave{
-	0%{
-		transform: translate3d(0%, 0, 0);
-	}
-	100%{
-		transform: translate3d(100%, 0, 0);
-	}
-}
-
-
 
 .mobile-scroll{
 	transform: translateX(0px);
@@ -1830,6 +1740,9 @@ footer{
 	}
 }
 @media (max-width: 1025px){
+	.news-block{
+		display: block;
+	}
 	.fail-page .text span{
 		font-size: 22vw;
 	}
@@ -1966,7 +1879,12 @@ footer{
 	}
 }
 @media (max-width: 769px){
-
+	.square-white-block{
+		padding: 30px;
+		p{
+			font-size: 15px!important;
+		}
+	}
  	header .half-header{
 		width: 70%;
 		&:first-child{
