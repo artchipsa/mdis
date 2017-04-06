@@ -424,7 +424,6 @@ function anchorsBlock(){
 	    var window_width = $(this).width();
 	    // IF ставим к менюшке фиксированную позицию.
 	    if(fromTop >= fixed_trigger){
-	    	alert('Opa');
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
 	   		waveFixed.show();
 
