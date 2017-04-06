@@ -420,8 +420,12 @@ function anchorsBlock(){
 	});
   
 	$(window).scroll(function(){
-	    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 	    var window_width = $(this).width();
+		if (window_width > 800){
+		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
+		} else {
+		    var fromTop = $(this).scrollTop() + anchorMenuHeight+85;
+		}
 	    // IF ставим к менюшке фиксированную позицию.
 	    if(fromTop >= fixed_trigger){
 	   		anchorMenu.addClass('fixed').removeClass('fixed_stop');
