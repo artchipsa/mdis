@@ -428,7 +428,7 @@ function anchorsBlock(){
 		if (window_width > 800){
 		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
 		} else {
-		    var fromTop = $(this).scrollTop() + anchorMenuHeight+130;
+		    var fromTop = $(this).scrollTop() + anchorMenuHeight+85;
 		}
 	    // IF ставим к менюшке фиксированную позицию.
 	    if(fromTop >= fixed_trigger){
