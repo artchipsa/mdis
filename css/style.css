@@ -54,6 +54,11 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 #content-changer {
   overflow: hidden;
 }
