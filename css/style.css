@@ -80,48 +80,49 @@
 .overflow {
   overflow: hidden;
   min-height: 100vh;
+  width: 100%;
 }
 .transition-block {
-  animation-fill-mode: forward;
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
 }
 .transition-block.ng-leave .main-container {
-  animation-fill-mode: forward;
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: leftleave;
 }
 .transition-block.ng-enter .main-container {
-  animation-fill-mode: forward;
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: rightenter;
 }
-.transition-block.slide-right.ng-leave-prepare .content-container,
-.transition-block.slide-right.ng-leave .content-container {
-  animation-fill-mode: forward;
+.transition-block.slide-right.ng-leave-prepare,
+.transition-block.slide-right.ng-leave {
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: rightleave;
 }
-.transition-block.slide-right.ng-enter-prepare .content-container,
-.transition-block.slide-right.ng-enter .content-container {
-  animation-fill-mode: forward;
+.transition-block.slide-right.ng-enter-prepare,
+.transition-block.slide-right.ng-enter {
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: rightenter;
 }
-.transition-block.slide-left.ng-leave-prepare .content-container,
-.transition-block.slide-left.ng-leave .content-container {
-  animation-fill-mode: forward;
+.transition-block.slide-left.ng-leave-prepare,
+.transition-block.slide-left.ng-leave {
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: leftleave;
 }
-.transition-block.slide-left.ng-enter-prepare .content-container,
-.transition-block.slide-left.ng-enter .content-container {
-  animation-fill-mode: forward;
+.transition-block.slide-left.ng-enter-prepare,
+.transition-block.slide-left.ng-enter {
+  animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-name: leftenter;
