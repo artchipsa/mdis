@@ -2428,6 +2428,23 @@ footer .item .top {
 .page-content .services-block .line-item {
   width: 50%;
   margin-right: 0px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border: none;
+}
+.page-content .services-block .line-item:hover:before {
+  background-color: #212121;
+}
+.page-content .services-block .line-item:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  transition: all .25s ease;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .page-content .services-block .line-item:first-child {
   width: 100%;
