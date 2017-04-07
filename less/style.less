@@ -689,7 +689,7 @@ header{
 		.news{
 			width: 50%;
 			background-color: transparent;
-			background-size: 101%;
+			background-size: cover;
 			background-position: center;
 			margin-right: 0px;
 			vertical-align: top;
@@ -1320,6 +1320,9 @@ footer{
 	}
 }
 
+.main-contaier .services-block{
+	display: flex;
+}
 .search-result{
 	.switcher-block{
 		text-align: left;
@@ -1887,6 +1890,9 @@ footer{
 	}
 }
 @media (max-width: 769px){
+	.main-contaier .services-block{
+		display: block;
+	}
 	.square-white-block{
 		padding: 30px;
 		p{
@@ -2078,6 +2084,9 @@ footer{
 	}
 }
 @media (max-width: 439px){
+	.main-container .line-item.black{
+		display: block;
+	}
 	.switch-modal-window iframe{
 		width: 100%;
 	}
@@ -2481,5 +2490,8 @@ footer{
 	    width: 100%;
 	    padding: 20px 0px;
 	    display: block;
+	}
+	.menu-row a{
+		display: block!important;
 	}
 }

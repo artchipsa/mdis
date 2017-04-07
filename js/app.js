@@ -68,10 +68,10 @@ $(document).ready(function(){
 		var modal = $(this).data('modal');
 
 		if ($(window).width() < 1370){
-			$('#'+modal).mCustomScrollbar({
+			var scroll = $('#'+modal); 
+			scroll.mCustomScrollbar({
 				scrollInertia: 155,
-				theme: "dark-3",
-				contentTouchScroll: false
+				theme: "dark-3"
 			});
 		}
 
@@ -517,6 +517,7 @@ function mobileScroll(){
 
 		if ($(this).width() > $(window).width()){
 			$(this).hammer().bind('panstart', function(e){
+				console.log(1);
 				var matrix = $(this).css('transform');
 				matrix = matrix.split('(')[1];
 				matrix = matrix.split(')')[0];
