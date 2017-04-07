@@ -1305,7 +1305,7 @@ footer .item .top {
 .modal form .form-row .input.error {
   border-color: #E2112E;
 }
-.main-contaier .services-block {
+.main-container .services-block {
   display: flex;
 }
 .search-result .switcher-block {
@@ -2910,7 +2910,7 @@ footer .item .top {
   }
 }
 @media (max-width: 769px) {
-  .main-contaier .services-block {
+  .main-container .services-block {
     display: block;
   }
   .square-white-block {
