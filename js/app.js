@@ -567,7 +567,7 @@ function photoTabs(){
 		$('.photo-tab-block .item').each(function(){
 			width = width + $(window).width();
 		});
-		$('.photo-tab-block').width(width + 75);
+		$('.photo-tab-block').width(width + 175);
 	}, 100);
 }
 function initMap(){
