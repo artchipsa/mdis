@@ -1882,7 +1882,7 @@ footer .item .top {
   margin-right: 0px;
 }
 .square-white-block {
-  background-color: #e0e0e0;
+  background-color: #BDBDBD;
   border: 1px solid #E0E0E0;
   height: 263px;
   padding: 35px 40px;
@@ -2279,7 +2279,7 @@ footer .item .top {
   text-decoration: none;
 }
 .support-questions-block .line-item {
-  background-color: #e0e0e0;
+  background-color: #BDBDBD;
   border: 1px solid #e0e0e0;
   width: calc(50% - 30px);
   margin-right: 30px;
