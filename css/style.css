@@ -3527,8 +3527,8 @@ footer .item .top {
   top: 20%;
 }
 .owl-carousel.owl-drag .owl-item:before {
-  right: 50%;
+  right: 75%;
 }
 .owl-carousel.owl-drag .owl-item:after {
-  left: 50%;
+  left: 75%;
 }
