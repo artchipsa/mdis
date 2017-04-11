@@ -3531,3 +3531,9 @@ footer .item .top {
 .owl-carousel.owl-drag .owl-item:after {
   left: 75%;
 }
+@media (max-width: 768px){
+  .owl-carousel.owl-drag .owl-item:before,
+  .owl-carousel.owl-drag .owl-item:after {
+    display: none;
+  }
+}
